@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Log In - jSocial+</title>
+  <link rel="stylesheet" href="LOGIN.css" />
+</head>
+<body>
+  <header class="header">
+    <img src="JSOCIAL LOGO.png" alt="Jsocial+ Logo" class="site-logo" />
+    <nav class="nav-links">
+    
+      <a href="SIGNUP.html">Sign Up</a>
+    </nav>
+  </header>
+
+  <div class="login-container">
+    <div class="form-section">
+      <h2>Log In to jSocial+</h2>
+
+      <form id="loginForm">
+        <input type="text" id="username" name="username" placeholder="Username" required>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <button type="submit">Log In</button>
+      </form>
+
+      <div class="extra-options">
+        <a href="#">Forgot Password?</a>
+        <p>Don't have an account? <a href="SIGNUP.html">Create an Account</a></p>
+      </div>
+
+      <div class="social-login">
+        <button class="social-button google">Log In with Google</button>
+        <button class="social-button facebook">Log In with Facebook</button>
+        <button class="social-button instagram">Log In with Instagram</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 jSocial+. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+  </footer>
+
+  <script>
+    // Fake login functionality: redirect on form submission
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form from submitting
+      // You could validate input here (optional)
+      window.location.href = 'home.html'; // Redirect to homepage
+    });
+  </script>
+</body>
+</html>

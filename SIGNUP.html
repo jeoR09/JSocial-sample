@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign up with jSocial+</title>
+  <link rel="stylesheet" href="SIGNUP.css">
+</head>
+
+<body>
+  <header class="header">
+    <img src="JSOCIAL LOGO.png" alt="Jsocial+ Logo" class="site-logo" />
+    <nav class="nav-links">
+      <a href="LOGIN.html">Log In</a>
+    </nav>
+  </header>
+
+  <div class="signup-container">
+    <div class="image-section">
+      <img src="photo.png" alt="Jsocial+ visuals" class="main-image" />
+    </div>
+    <div class="form-section">
+      <main>
+        <button class="facebook-button">SIGN UP WITH FACEBOOK</button>
+
+        <div class="divider">
+          <span class="divider-line"></span>
+          <span class="divider-text">or</span>
+          <span class="divider-line"></span>
+        </div>
+
+        <form id="signup-form">
+          <input type="email" id="email" name="email" placeholder="Email" required>
+          <input type="email" id="confirm-email" name="confirm-email" placeholder="Confirm Email" required>
+          <input type="password" id="password" name="password" placeholder="Password" required>
+          <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
+
+          <div class="dob">
+            <input type="text" id="month" name="month" placeholder="Month" required>
+            <input type="text" id="day" name="day" placeholder="Day" required>
+            <input type="text" id="year" name="year" placeholder="Year" required>
+          </div>
+
+          <div class="gender">
+            <label><input type="radio" name="gender" value="male"> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+            <label><input type="radio" name="gender" value="non-binary"> Non-binary</label>
+          </div>
+
+          <div class="marketing">
+            <input type="checkbox" name="marketing" value="yes" id="marketing">
+            <label for="marketing">Agree to share data for marketing</label>
+          </div>
+
+          <button type="submit">Sign Up</button>
+        </form>
+
+        <div class="terms">
+          <p>By signing up, you agree to our <a href="terms.html">Terms</a> and <a href="privacy.html">Privacy Policy</a>.</p>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 jSocial+. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+  </footer>
+
+  <!-- JavaScript for redirect -->
+  <script>
+    document.getElementById("signup-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      // Simple match check for emails and passwords
+      const email = document.getElementById("email").value;
+      const confirmEmail = document.getElementById("confirm-email").value;
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirm-password").value;
+
+      if (email !== confirmEmail) {
+        alert("Emails do not match.");
+        return;
+      }
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return;
+      }
+
+      // Proceed to home page
+      window.location.href = "home.html";
+    });
+  </script>
+</body>
+</html>
